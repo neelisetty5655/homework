@@ -1,0 +1,65 @@
+<!-- <p>hi my name is{{displayname()}}</p>
+<button (click)="display('varun')">click</button>
+<input type="text" #data (keydown)="display(data.value)">
+<p>{{dat}}</p>
+
+<button (click)="cal('add')">++</button>
+<p>display:{{ans}}</p>
+<button (click)="cal('sub')">--</button>
+
+<p [style]=color>varun</p>
+<input type="text" [placeholder]=name> 
+
+
+<p *ngIf="show; then if1 else if2"></p>
+<ng-template #if1>codition 1</ng-template>
+<ng-template #if2>codition 2</ng-template>
+
+<div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'">red</h1>
+
+</div>
+
+<table border="2">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>username</th>
+        <th>email</th>
+        <th>address</th>
+    </tr>
+<tr *ngFor="let data of jasondata">
+    <td>{{data.id}}</td>
+    <td>{{data.name}}</td>
+    <td>{{data.username}}</td>
+    <td>{{data.email}}</td>
+    <td>
+      <ul>
+          <li>{{data.address.street}}</li>
+          <li>{{data.address.city}}</li>
+          <li>{{data.address.zipcode}}</li>
+          <li>
+              geo
+              <ul>
+                    <li>{{data.address.geo.lng}}</li>
+                    <li>{{data.address.geo.lat}}</li>
+              </ul>
+          </li>
+          <li>{{data.phone}}</li>
+          <li>{{data.website}}</li>
+      </ul>
+    </td>
+    
+</tr>
+</table> -->
+<input type="text" [(ngModel)]=twoway>
+<h1>{{twoway}}</h1>
+<h1>{{dis}}</h1>
+<input type="text" #task>
+<button (click)="addtotask(task.value)">add to task</button>
+<ul *ngFor="let a of arr">
+ 
+ <li>{{a.name}} <button (click)="delete(a.id)"> delete</button> </li>
+</ul>
+
+<app-body [item]="'a'" (newv)="addp($event)"></app-body>
